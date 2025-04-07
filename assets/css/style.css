@@ -164,7 +164,7 @@ body {
 }
 
 .btn--gray {
-    margin-top: 25px;
+    margin-top: 0.3rem;
     background-color: #445361;
     border: 1px transparent;
     border-radius: 20px;
