@@ -108,14 +108,14 @@ function displayAdditionQuestion(operand1, operand2)
 }
 
 function displaySubtractQuestion(operand1,operand2){
-    document.getElementById("operand1").textContent=operand1;
-    document.getElementById("operand2").textContent=operand2;
+    document.getElementById("operand1").textContent=operand1 > operand2 ? operand1 : operand2;
+    document.getElementById("operand2").textContent=operand1 > operand2 ? operand2 : operand1;
     document.getElementById("operator").textContent="-";
 }
 
 function displayMultiplyQuestion(operand1,operand2)
 {// we want the result of the subtact to be positive so the operand1 has to be bigger than operand2
-    document.getElementById("operand1").textContent=operand1 > operand2 ? operand1 : operand2;
-    document.getElementById("operand2").textContent=operand1 > operand2 ? operand2 : operand1;
+    document.getElementById("operand1").textContent=operand1;
+    document.getElementById("operand2").textContent=operand2;
     document.getElementById("operator").textContent="-";
 }
