@@ -43,6 +43,9 @@ else if(gameType==="multiply"){
 else if(gameType==="subtract"){
     displaySubtractQuestion(num1,num2);
  }
+ else if(gameType==="division"){
+    displayDivisionQuestion(num1,num2);
+ }
 else{
     alert("Unknown game type: "+gameType)
     throw `unknown game type: ${gameType}. Aborting`
@@ -82,6 +85,9 @@ function calculateCorrectAnswer()
   }
   else if(operator === "-"){
     return [operand1 - operand2, "subtract"];// return array two elements number and operator
+  } 
+  else if(operator === "/"){
+    return [operand1 / operand2, "division"];// return array two elements number and operator
   } 
   else {
     alert(`Unimplemented operator ${operator}`);
@@ -125,4 +131,11 @@ function displayMultiplyQuestion(operand1,operand2)
     document.getElementById("operand1").textContent=operand1;
     document.getElementById("operand2").textContent=operand2;
     document.getElementById("operator").textContent="x";
+}
+
+function displayDivisionQuestion(operand1,operand2)
+{// we want the result of the subtact to be positive so the operand1 has to be bigger than operand2
+    document.getElementById("operand1").textContent=operand1*operand2;
+    document.getElementById("operand2").textContent=operand2;
+    document.getElementById("operator").textContent="/";
 }
